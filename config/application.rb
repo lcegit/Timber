@@ -23,5 +23,6 @@ module Timber
     end
     config.load_defaults 5.1
     config.generators.system_tests = nil
+    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
   end
 end

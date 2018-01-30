@@ -24,6 +24,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'coveralls', require: false
   gem 'launchy'
+  gem 'browserify-rails', '~>0.5'
 end
 
 group :development do
