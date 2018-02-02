@@ -41,6 +41,10 @@ def page_path_from(page_name)
   case page_name.downcase
     when 'sign up'
       new_user_registration_path
+    when 'family tree'
+      family_tree_path
+    when 'add family members'
+      new_member_path
     when 'family trees'
       family_trees_path
     when 'photo index'

@@ -10,19 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131145731) do
+ActiveRecord::Schema.define(version: 20180202091117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "family_trees", force: :cascade do |t|
-    t.string "first_name"
     t.string "last_name"
     t.string "relationship"
-    t.integer "date_of_birth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_family_trees_on_ancestry"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string "first_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "last_name"
+    t.string "relationship"
+    t.date "date_of_birth"
+    t.bigint "family_tree_id"
+    t.index ["family_tree_id"], name: "index_members_on_family_tree_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -52,4 +62,5 @@ ActiveRecord::Schema.define(version: 20180131145731) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "members", "family_trees"
 end
