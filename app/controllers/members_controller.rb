@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-  def create
+  def new
     @member = Member.create
   end
 end
