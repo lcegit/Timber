@@ -47,6 +47,8 @@ def page_path_from(page_name)
       new_user_registration_path
     when 'family tree'
       family_tree_path
+    when 'add family members'
+      new_member_path
     else
       root_path
   end

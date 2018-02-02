@@ -1,4 +1,5 @@
 class FamilyTreeController < ApplicationController
-  def show
+  def new
+    @family_tree = FamilyTree.create(params[:family_tree])
   end
 end
