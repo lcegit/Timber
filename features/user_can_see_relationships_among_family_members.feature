@@ -14,6 +14,7 @@ Feature: A user can see relationships among family members
   Scenario: User can create family tree
     When I fill in "Email" with "lisa@gmail.com"
     And I fill in "Password" with "heythere123"
+    Then show me the page
     And I click "Log in"
     When I click 'Family tree'
     When I click 'Add family members'

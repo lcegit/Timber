@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20180202091117) do
     t.string "last_name"
     t.string "relationship"
     t.date "date_of_birth"
-    t.bigint "family_trees_id"
-    t.index ["family_trees_id"], name: "index_members_on_family_trees_id"
+    t.bigint "family_tree_id"
+    t.index ["family_tree_id"], name: "index_members_on_family_tree_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,5 +52,5 @@ ActiveRecord::Schema.define(version: 20180202091117) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "members", "family_trees", column: "family_trees_id"
+  add_foreign_key "members", "family_trees"
 end
