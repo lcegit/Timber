@@ -1,10 +1,16 @@
 <h1>Add members to your family tree!</h1>
 
-<%= form_for(@member) do |f| %> 
-  First name<%= f.text_field(:first_name) %>
-  Last name<%= f.text_field(:last_name) %>
-  Relationship<%= f.text_field(:relationship) %>
-  Date of birth<%= f.text_field(:date_of_birth) %>
+<%= form_with scope: :members, url: members_path, local: true do |f| %>
+<div class="form-group">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :relationship %>
+  <%= f.text_field :relationship %>
+  <%= f.label :date_of_birth %>
+  <%= f.text_field :date_of_birth %>
+</div>
 
-<%= f.submit 'Add member to family tree', class: 'btn btn-primary' %>
+  <%= f.submit 'Add member to family tree', class: 'btn btn-primary' %>
 <% end %>
