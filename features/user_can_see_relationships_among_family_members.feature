@@ -14,15 +14,13 @@ Feature: A user can see relationships among family members
   Scenario: User can create family tree
     When I fill in "Email" with "lisa@gmail.com"
     And I fill in "Password" with "heythere123"
-    Then show me the page
     And I click "Log in"
     When I click 'Family tree'
     When I click 'Add family members'
     Then I should be redirected to the "Add family members" page
     Then show me the page
-    And I should see 'First name'
-    And I should see 'Last name'
-    And I should see 'Relationship'
-    And I should see 'Date of birth'
-    And I should see 'Upload image'
-    And I should see 'Add member to family tree'
+    When I fill in 'First name' with 'Anakin'
+    When I fill in 'Last name' with 'Skywalker'
+    When I fill in 'Relationship' with 'Father'
+    When I fill in 'Date of birth' with '1901/01/01'
+    And I click on 'Add member to family tree' button

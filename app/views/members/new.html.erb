@@ -1,8 +1,10 @@
 <h1>Add members to your family tree!</h1>
 
-<%= form_for(@member) do |f| %> -->
+<%= form_for(@member) do |f| %> 
   First name<%= f.text_field(:first_name) %>
   Last name<%= f.text_field(:last_name) %>
   Relationship<%= f.text_field(:relationship) %>
   Date of birth<%= f.text_field(:date_of_birth) %>
+
+<%= f.submit 'Add member to family tree', class: 'btn btn-primary' %>
 <% end %>
