@@ -7,17 +7,14 @@ RSpec.describe Member, type: :model do
    it { is_expected.to have_db_column :last_name }
    it { is_expected.to have_db_column :relationship }
    it { is_expected.to have_db_column :date_of_birth }
+   it { is_expected.to belong_to :family_tree }
   end
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :first_name }
     it { is_expected.to validate_presence_of :relationship }
+    it { is_expected.to belong_to :family_tree }    
   end
-
-  # describe "db seed tests" do
-  #   before(:each) do
-  #     load "#{Rails.root}/db/seeds.rb"
-  #   end
 
   describe 'FactoryBot' do
     it 'should be valid'  do
@@ -25,3 +22,8 @@ RSpec.describe Member, type: :model do
     end
   end
 end
+
+# describe "db seed tests" do
+#   before(:each) do
+#     load "#{Rails.root}/db/seeds.rb"
+#   end

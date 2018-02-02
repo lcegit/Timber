@@ -17,7 +17,6 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'react-rails'
-gem 'ancestry'
 
 group :development, :test do
   gem 'rspec-rails'
