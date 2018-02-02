@@ -11,6 +11,7 @@ Feature: A user can see relationships among family members
     When I visit the index page
     And I click "Log in"
 
+  @javascript
   Scenario: User can create family tree
     When I fill in "Email" with "lisa@gmail.com"
     And I fill in "Password" with "heythere123"
@@ -19,7 +20,6 @@ Feature: A user can see relationships among family members
     When I fill in "Last name" with "Skywalker"
     When I click "Save your family tree"
     Then I should see "Skywalker"
-    Then show me the page
     When I click "Add family members"
     Then I should be redirected to the "Add family members" page
     When I fill in "First name" with "Anakin"

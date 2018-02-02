@@ -1,6 +1,7 @@
 class FamilyTreesController < ApplicationController
 
   def index
+    # @family_tree = FamilyTree.all
   end
 
   def show

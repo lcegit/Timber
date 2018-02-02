@@ -1,1 +1,13 @@
 <h1>Add members to your family tree!</h1>
+
+<%= form_with scope: :family_tree, url: family_trees_path, local: true do |f| %>
+
+<div class="form-group">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</div>
+
+  <%= f.submit 'Save your family tree', class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to 'Add family members', new_member_path, :class => 'action new' %>

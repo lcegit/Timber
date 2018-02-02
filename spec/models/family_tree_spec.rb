@@ -11,7 +11,7 @@ RSpec.describe FamilyTree, type: :model do
   end
 
   describe 'Validations' do
-    it { is_expected.to validate_presence_of :relationship }
+    it { is_expected.to validate_presence_of :last_name }
   end
 
   describe 'FactoryBot' do
