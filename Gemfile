@@ -13,6 +13,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'ancestry'
+gem "paperclip", "~> 5.2.1"
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
